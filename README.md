@@ -87,7 +87,7 @@ Launch Docker Container from Docker Image, exposing port 9025 on localhost only
 
 Launch Docker Container from Docker Image, exposing port 9026 on all IPs
 
-> docker run -p 9025:3000 -d surebert/docker-ffpmeg
+> docker run -p 9025:3000 -d doublelayer/ffmpeg-converter-service
 
 ## Testing the API
 
