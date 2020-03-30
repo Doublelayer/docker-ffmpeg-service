@@ -91,4 +91,4 @@ Launch Docker Container from Docker Image, exposing port 9026 on all IPs
 
 Upload File to 127.0.0.1:9025
 
-> \$ curl -F "file=@./upload/testfile.mp4" localhost:9025/mp4 > download/output.mp4
+> \$ curl -F "file=@./uploads/testfile.mp4" localhost:9025/mp4 > downloads/output.mp4
