@@ -7,6 +7,7 @@ Based off of jrottenberg/ffmpeg container
 ## Fast start
 
 > docker-compose up -d --build
+
 > explorer "http://127.0.0.1:9025"
 
 ## Endpoints
