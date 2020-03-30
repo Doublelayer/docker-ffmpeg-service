@@ -24,17 +24,19 @@ Based off of jrottenberg/ffmpeg container
 
 Curl Ex:
 
-> curl -F "file=@input.wav" 127.0.0.1:9025/mp3 > output.mp3
+> curl -F "file=@./uploads/input.wav" 127.0.0.1:9025/mp3 > downloads/output.mp3
 
-> curl -F "file=@input.m4a" 127.0.0.1:9025/mp3 > output.mp3
+> curl -F "file=@./uploads/input.m4a" 127.0.0.1:9025/mp3 > downloads/output.mp3
 
-> curl -F "file=@input.mov" 127.0.0.1:9025/mp4 > output.mp4
+> curl -F "file=@./uploads/input.mov" 127.0.0.1:9025/mp4 > downloads/output.mp4
 
-> curl -F "file=@input.mp4" 127.0.0.1:9025/mp4 > output.mp4
+> curl -F "file=@./uploads/input.mp4" 127.0.0.1:9025/mp4 > downloads/output.mp4
 
-> curl -F "file=@input.tiff" 127.0.0.1:9025/jpg > output.jpg
+> curl -F "file=@./uploads/input.tiff" 127.0.0.1:9025/jpg > downloads/output.jpg
 
-> curl -F "file=@input.png" 127.0.0.1:9025/jpg > output.jpg
+> curl -F "file=@./uploads/input.png" 127.0.0.1:9025/jpg > downloads/output.jpg
+
+> curl -F "file=@./uploads/input.mp4" 127.0.0.1:9025/screenshot > downloads/output.jpg
 
 ## Configuration and New Endpoints
 
