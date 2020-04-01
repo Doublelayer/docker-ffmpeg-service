@@ -77,13 +77,7 @@ Build Docker Image from Dockerfile with a set image tag. ex: docker-ffpmeg
 
 Launch Docker Container from Docker Image, exposing port 9025 on localhost only
 
-> docker run -d \
-
-    --name ffmpeg-service \
-    --restart=always \
-    -v /storage/tmpfs:/usr/src/app/uploads \
-    -p 127.0.0.1:9025:3000 \
-    doublelayer/ffmpeg-converter-service
+> docker run -d --name ffmpeg-service --restart=always -v /storage/tmpfs:/usr/src/app/uploads -p 127.0.0.1:9025:3000 doublelayer/ffmpeg-converter-service
 
 Launch Docker Container from Docker Image, exposing port 9026 on all IPs
 
