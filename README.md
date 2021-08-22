@@ -88,3 +88,30 @@ Launch Docker Container from Docker Image, exposing port 9026 on all IPs
 Upload File to 127.0.0.1:9025
 
 > \$ curl -F "file=@./uploads/testfile.mp4" localhost:9025/mp4 > downloads/output.mp4
+
+## JS Example
+
+```javascript
+return new Promise(async (resolve, reject) => {
+  const stream = fs.createReadStream(file);
+  const url = 'http://127.0.0.1:9025/screenshot';
+
+  const formData = new FormData();
+  formData.append('file', stream);
+
+  logger.info(`starting to create thumbnail for '${file}'`);
+
+  await fetch(url, {
+    method: 'POST',
+    body: formData,
+  })
+    .then((res) => res.buffer())
+    .then((buffer) => {
+      logger.info("sucessfully create thumbnail for " + fileName);
+      resolve(buffer.toString('base64'));
+    })
+    .catch((err) => {
+      reject(err);
+    });
+});
+```
